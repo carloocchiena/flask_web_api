@@ -33,7 +33,7 @@ def page_not_found(e):
     return "<h1>OOPS</h1> <p> Page not found </p>", 404
 
 #routing full view of albums list
-@app.route('/api/v1/resources/album/all', methods=["GET"])
+@app.route('/api/v1/resources/albums/all', methods=["GET"])
 def api_all():
     conn = sqlite3.connect(DB)
     conn.row_factory = dict_factory
@@ -43,7 +43,7 @@ def api_all():
     return jsonify(all_album)
     
 #routing api connection to album db
-@app.route("/api/v1/resources/album", methods=["GET"])
+@app.route("/api/v1/resources/albums", methods=["GET"])
 def api_filter():
     """API items availables at the date
     
