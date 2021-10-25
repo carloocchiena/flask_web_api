@@ -13,8 +13,7 @@ def dict_factory(cursor, row):
     """Convert DB items into dictionary objects.
     
     This function convert items from the db in the form of a dictionary instead than of a list. 
-    It ensure a proper jsonification of the items.
-    
+    It ensure a proper jsonification of the items.  
     """
     d = dict()
     for idx, col in enumerate(cursor.description):
@@ -48,7 +47,6 @@ def api_filter():
     """API items availables at the date
     
     Currently the following parameters have been instantiated: id_key (primary key), artist, album and genre.
-    
     """
     query_parameters = request.args
     
